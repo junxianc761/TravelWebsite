@@ -1,0 +1,268 @@
+/* ==========================================
+   🏛️ 品牌主視覺變數 (Brand CSS Variables)
+   ========================================== */
+:root {
+    --brand: #1B2E5E;
+    --brand-dark: #111E3F;
+    --brand-link: #2C4375;
+    --gold: #C9A84C;
+    --gold-hover: #B29135;
+    --gold-light: #F9F5EB;
+    --bg: #F7F8FA;
+    --white: #FFFFFF;
+    --text: #222222;
+    --text-muted: #666666;
+    --border: #E5E7EB;
+    --radius: 8px;
+    --shadow: 0 2px 12px rgba(27, 46, 94, .08);
+}
+
+/* 全域基礎樣式 */
+body {
+    font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* 1. Hero 頂部區塊 */
+.page-hero {
+    background: linear-gradient(135deg, rgba(27, 46, 94, 0.2), rgba(17, 30, 63, 0.2)),
+                url('/images/detail-hero.jpg') center/cover no-repeat;
+    color: var(--white);
+    padding: 60px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.page-hero h1 {
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6); /* 新增文字陰影 */
+}
+
+.page-hero .bc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.page-hero .bc a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+.page-hero .bc a:hover {
+    color: var(--gold);
+}
+
+/* 2. 主區域 Layout (雙欄) */
+.section {
+    padding-bottom: 50px;
+}
+
+.layout-2col {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+}
+
+.back-btn {
+    color: var(--brand);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-btn:hover {
+    color: var(--gold-hover);
+}
+
+/* 3. 主要文章卡片 */
+.article-card {
+    background: var(--white);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+/* 相簿與縮圖列表 */
+.views-gallery .main-cover-box img {
+    border-radius: var(--radius);
+}
+
+.thumbnail-gallery .thumb-link img {
+    width: 90px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.thumbnail-gallery .thumb-link:hover img {
+    border-color: var(--gold) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(201, 168, 76, 0.3);
+}
+
+/* 內文與 Badge */
+.article-content {
+    font-size: 15px;
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.news-badge {
+    display: inline-block;
+    font-size: 12px;
+    color: #8C6D1F;
+    background-color: var(--gold-light);
+    border: 1px solid #E2D3AB;
+    padding: 2px 10px;
+    border-radius: 12px;
+}
+
+/* 4. 側邊欄 (Sidebar) */
+.sidebar-card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+.sidebar-title {
+    font-weight: 700;
+    color: var(--brand);
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 15px;
+}
+
+.cat-list-item a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14.5px;
+    transition: color 0.2s ease;
+}
+
+.cat-list-item a:hover {
+    color: var(--gold-hover);
+}
+
+/* 熱門景點圖片 */
+.recent-item-img {
+    width: 60px;               /* 寬度改為 60px */
+    height: 60px;              /* 高度改為 60px */
+    aspect-ratio: 1 / 1;       /* 強制 1:1 正方形比例 */
+    object-fit: cover;
+    border-radius: 6px;        /* 圓角可依喜好調整 */
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.recent-no-img {
+    width: 60px;               /* 寬度改為 60px */
+    height: 60px;              /* 高度改為 60px */
+    aspect-ratio: 1 / 1;       /* 強制 1:1 正方形比例 */
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.recent-body .rt a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.recent-body .rt a:hover {
+    color: var(--gold-hover);
+}
+
+
+
+/* RWD */
+@media screen and (max-width: 992px) {
+    .layout-2col {
+        grid-template-columns: 1fr;
+    }
+}
+
+  /* 強制修正 Fancybox 控制按鈕與箭頭顯示 (防止被 Bootstrap 等 CSS 覆蓋) */
+  .fancybox__container {
+    --fancybox-color: #ffffff;
+    --fancybox-bg: rgba(24, 24, 27, 0.92);
+    z-index: 1050 !important;
+    /* 確保高於 Bootstrap Navbar/Modal */
+  }
+
+  /* 左右切換箭頭顯示與大小修復 */
+  .fancybox__container .carousel__button.is-prev,
+  .fancybox__container .carousel__button.is-next {
+    display: flex !important;
+    opacity: 1 !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 50% !important;
+    width: 48px !important;
+    height: 48px !important;
+    color: #ffffff !important;
+  }
+
+  .fancybox__container .carousel__button.is-prev:hover,
+  .fancybox__container .carousel__button.is-next:hover {
+    background: rgba(201, 168, 76, 0.8) !important;
+    /* 懸停變金色 */
+  }
+
+  /* 右上角工具列與退出按鈕修復 */
+  .fancybox__toolbar {
+    --fancybox-color: #ffffff;
+    opacity: 1 !important;
+    padding: 8px !important;
+  }
+
+  .fancybox__toolbar .fancybox__button {
+    color: #ffffff !important;
+    opacity: 0.9 !important;
+  }
+
+  .fancybox__toolbar .fancybox__button:hover {
+    opacity: 1 !important;
+    color: #C9A84C !important;
+  }
+
+  /* 頁面下方小縮圖列表樣式 */
+  .thumbnail-gallery .thumb-link img {
+    width: 90px;
+    height: 65px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .thumbnail-gallery .thumb-link img:hover {
+    transform: translateY(-2px);
+    border-color: #C9A84C !important;
+    box-shadow: 0 4px 8px rgba(201, 168, 76, 0.3);
+  }
+
+
+
+  .recent-item:hover .recent-item-img {
+    transform: scale(1.05);
+  }
+
+  
+
+

@@ -1,0 +1,959 @@
+/* =========================================================
+   Taiwan Journey Header
+========================================================= */
+
+
+/* =========================================================
+   Header Reset
+========================================================= */
+
+.d-top,
+.d-nav,
+.d-top *,
+.d-nav * {
+    box-sizing:
+        border-box;
+}
+
+
+.d-top a,
+.d-nav a {
+    text-decoration:
+        none;
+}
+
+
+.d-top img,
+.d-nav img {
+    display:
+        block;
+
+    max-width:
+        100%;
+}
+
+
+/* =========================================================
+   Topbar
+========================================================= */
+
+.d-top {
+    min-height:
+        var(--topbar-h);
+
+    padding:
+        0 32px;
+
+    color:
+        rgba(255, 255, 255, 0.8);
+
+    background:
+        linear-gradient(100deg,
+            var(--brand-dark) 0%,
+            var(--brand) 48%,
+            var(--green-dark) 100%);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    font-size:
+        13px;
+}
+
+
+.d-top .container-fluid {
+    min-height:
+        var(--topbar-h);
+
+    gap:
+        4px;
+}
+
+
+.d-top a {
+    min-height:
+        var(--topbar-h);
+
+    padding:
+        5px 9px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        5px;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    border-radius:
+        6px;
+
+    transition:
+        color 0.22s ease,
+        background 0.22s ease;
+}
+
+
+.d-top a i {
+    color:
+        #FFD16C;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+.d-top a:hover {
+    color:
+        #fff;
+
+    background:
+        rgba(255, 255, 255, 0.1);
+}
+
+
+.d-top a:hover i {
+    transform:
+        translateY(-1px);
+}
+
+
+.d-top .sep {
+    color:
+        rgba(255, 255, 255, 0.28);
+}
+
+
+/* =========================================================
+   Navbar
+========================================================= */
+
+.d-nav {
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        1000;
+
+    min-height:
+        var(--nav-h);
+
+    padding:
+        0 32px;
+
+    background:
+        rgba(255, 255, 255, 0.97);
+
+    border-bottom:
+        1px solid rgba(11, 95, 135, 0.1);
+
+    box-shadow:
+        0 8px 28px rgba(7, 59, 89, 0.08),
+        0 2px 6px rgba(7, 59, 89, 0.04);
+
+    backdrop-filter:
+        blur(14px);
+
+    -webkit-backdrop-filter:
+        blur(14px);
+}
+
+
+.d-nav>.container-fluid {
+    min-width:
+        0;
+
+    padding:
+        0;
+}
+
+
+/* =========================================================
+   Logo
+========================================================= */
+
+.d-nav .lb {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    margin-right:
+        11px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex:
+        0 0 46px;
+
+    color:
+        #fff;
+
+    background:
+        linear-gradient(145deg,
+            var(--ocean-light),
+            var(--green-soft));
+
+    border:
+        2px solid rgba(11, 95, 135, 0.16);
+
+    border-radius:
+        12px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    box-shadow:
+        0 5px 14px rgba(7, 59, 89, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* Logo 裡有圖片時 */
+.d-nav .lb img {
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+}
+
+
+/* Logo 只有文字時 */
+.d-nav .lb a {
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        var(--brand-dark);
+}
+
+
+.d-nav .lb:hover {
+    transform:
+        translateY(-2px) rotate(-1deg);
+
+    border-color:
+        rgba(47, 133, 90, 0.4);
+
+    box-shadow:
+        0 9px 20px rgba(7, 59, 89, 0.17);
+}
+
+
+/* =========================================================
+   Brand Name
+========================================================= */
+
+.d-nav .brand {
+    margin:
+        0 30px 0 0;
+
+    padding:
+        0;
+
+    color:
+        var(--brand-dark);
+
+    font-size:
+        19px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.2px;
+
+    white-space:
+        nowrap;
+
+    transition:
+        color 0.22s ease;
+}
+
+
+.d-nav .brand a {
+    color:
+        inherit;
+}
+
+
+.d-nav .brand:hover {
+    color:
+        var(--green);
+}
+
+
+/* =========================================================
+   Collapse
+========================================================= */
+
+.d-nav .navbar-collapse {
+    min-width:
+        0;
+}
+
+
+/* =========================================================
+   Links
+========================================================= */
+
+.d-nav .links {
+    min-height:
+        var(--nav-h);
+
+    display:
+        flex;
+
+    align-items:
+        stretch;
+
+    gap:
+        3px;
+}
+
+
+/* =========================================================
+   Nav Link
+========================================================= */
+
+.d-nav .links .nav-link {
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    min-height:
+        var(--nav-h);
+
+    padding:
+        0 15px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        #344850;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        0.2px;
+
+    white-space:
+        nowrap;
+
+    isolation:
+        isolate;
+
+    transition:
+        color 0.22s ease;
+}
+
+
+/* Hover 淺背景 */
+.d-nav .links .nav-link::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        11px 4px;
+
+    z-index:
+        -1;
+
+    background:
+        linear-gradient(135deg,
+            var(--ocean-light),
+            var(--green-soft));
+
+    border-radius:
+        9px;
+
+    opacity:
+        0;
+
+    transform:
+        scale(0.9);
+
+    transition:
+        opacity 0.22s ease,
+        transform 0.22s ease;
+}
+
+
+/* 底線 */
+.d-nav .links .nav-link::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        0;
+
+    width:
+        0;
+
+    height:
+        4px;
+
+    background:
+        linear-gradient(90deg,
+            var(--green),
+            var(--ocean),
+            var(--sun));
+
+    border-radius:
+        4px 4px 0 0;
+
+    transform:
+        translateX(-50%);
+
+    transition:
+        width 0.28s ease;
+}
+
+
+.d-nav .links .nav-link:hover,
+.d-nav .links .nav-link.active {
+    color:
+        var(--brand);
+}
+
+
+.d-nav .links .nav-link:hover::before,
+.d-nav .links .nav-link.active::before {
+    opacity:
+        1;
+
+    transform:
+        scale(1);
+}
+
+
+/*
+    非 active 才執行 hover 底線
+    避免你之前遇到的兩條底線問題
+*/
+.d-nav .links .nav-link:not(.active):hover::after {
+    width:
+        45%;
+}
+
+
+.d-nav .links .nav-link.active::after {
+    width:
+        calc(100% - 28px);
+}
+
+
+/* =========================================================
+   Cart / 收藏
+========================================================= */
+
+.d-nav .cart {
+    position:
+        relative;
+
+    min-height:
+        42px;
+
+    margin-left:
+        auto;
+
+    padding:
+        0 18px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        7px;
+
+    flex-shrink:
+        0;
+
+    color:
+        var(--brand);
+
+    background:
+        #fff;
+
+    border:
+        1.5px solid rgba(11, 95, 135, 0.55);
+
+    border-radius:
+        999px;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    box-shadow:
+        0 4px 12px rgba(7, 59, 89, 0.08);
+
+    transition:
+        color 0.22s ease,
+        background 0.22s ease,
+        border-color 0.22s ease,
+        transform 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+
+.d-nav .cart i {
+    color:
+        var(--lantern);
+
+    transition:
+        transform 0.22s ease;
+}
+
+
+.d-nav .cart:hover {
+    color:
+        #fff;
+
+    border-color:
+        transparent;
+
+    background:
+        linear-gradient(135deg,
+            var(--brand),
+            var(--green));
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(7, 59, 89, 0.18);
+}
+
+
+.d-nav .cart:hover i {
+    color:
+        #FFD56F;
+
+    transform:
+        scale(1.12);
+}
+
+
+/* =========================================================
+   收藏數量
+========================================================= */
+
+.d-nav .cart-badge {
+    min-width:
+        21px;
+
+    height:
+        21px;
+
+    padding:
+        0 5px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        #fff;
+
+    background:
+        var(--lantern);
+
+    border:
+        2px solid #fff;
+
+    border-radius:
+        999px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1;
+
+    box-shadow:
+        0 2px 6px rgba(216, 74, 50, 0.25);
+}
+
+
+/* =========================================================
+   Navbar Toggler
+========================================================= */
+
+.d-nav .navbar-toggler {
+    min-width:
+        43px;
+
+    min-height:
+        41px;
+
+    padding:
+        5px 8px;
+
+    color:
+        var(--brand);
+
+    background:
+        var(--ocean-light);
+
+    border:
+        1px solid rgba(11, 95, 135, 0.25);
+
+    border-radius:
+        9px;
+}
+
+
+.d-nav .navbar-toggler:focus {
+    box-shadow:
+        0 0 0 3px rgba(245, 166, 35, 0.25);
+}
+
+
+/* =========================================================
+   Focus
+========================================================= */
+
+.d-top a:focus-visible,
+.d-nav a:focus-visible,
+.d-nav button:focus-visible {
+    outline:
+        3px solid rgba(245, 166, 35, 0.45);
+
+    outline-offset:
+        2px;
+}
+
+
+/* =========================================================
+   Tablet
+   Bootstrap lg = 992px
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .d-top {
+        padding:
+            0 16px;
+    }
+
+
+    .d-nav {
+        min-height:
+            64px;
+
+        padding:
+            9px 16px;
+    }
+
+
+    .d-nav .lb {
+        width:
+            42px;
+
+        height:
+            42px;
+
+        flex-basis:
+            42px;
+    }
+
+
+    .d-nav .brand {
+        margin-right:
+            auto;
+
+        font-size:
+            17px;
+    }
+
+
+    .d-nav .navbar-collapse {
+        width:
+            100%;
+
+        padding-top:
+            12px;
+    }
+
+
+    .d-nav .links {
+        min-height:
+            0;
+
+        width:
+            100%;
+
+        gap:
+            6px;
+    }
+
+
+    .d-nav .links .nav-link {
+        width:
+            100%;
+
+        min-height:
+            44px;
+
+        padding:
+            9px 13px;
+
+        justify-content:
+            flex-start;
+
+        background:
+            var(--bg);
+
+        border:
+            1px solid transparent;
+
+        border-radius:
+            9px;
+    }
+
+
+    .d-nav .links .nav-link:hover {
+        color:
+            var(--brand);
+
+        border-color:
+            rgba(22, 143, 196, 0.18);
+
+        background:
+            var(--ocean-light);
+    }
+
+
+    .d-nav .links .nav-link.active {
+        color:
+            #fff;
+
+        background:
+            linear-gradient(135deg,
+                var(--brand),
+                var(--green));
+
+        box-shadow:
+            0 4px 12px rgba(7, 59, 89, 0.13);
+    }
+
+
+    .d-nav .links .nav-link::before,
+    .d-nav .links .nav-link::after {
+        display:
+            none;
+    }
+
+
+    .d-nav .cart {
+        width:
+            100%;
+
+        min-height:
+            44px;
+
+        margin:
+            11px 0 2px;
+
+        border-radius:
+            9px;
+    }
+}
+
+
+/* =========================================================
+   Mobile
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+    html,
+    body {
+        max-width:
+            100%;
+
+        overflow-x:
+            hidden;
+    }
+
+
+    .d-top {
+        min-height:
+            36px;
+
+        padding:
+            0 6px;
+    }
+
+
+    .d-top .container-fluid {
+        padding:
+            0;
+
+        justify-content:
+            center !important;
+
+        gap:
+            0;
+    }
+
+
+    .d-top a {
+        min-height:
+            36px;
+
+        padding:
+            5px 6px;
+
+        font-size:
+            12px;
+    }
+
+
+    .d-top .sep {
+        font-size:
+            11px;
+    }
+
+
+    .d-nav {
+        width:
+            100%;
+
+        padding:
+            9px 12px;
+    }
+
+
+    .d-nav .lb {
+        width:
+            40px;
+
+        height:
+            40px;
+
+        flex-basis:
+            40px;
+
+        margin-right:
+            8px;
+
+        border-radius:
+            10px;
+    }
+
+
+    .d-nav .brand {
+        font-size:
+            16px;
+
+        letter-spacing:
+            0.5px;
+    }
+
+
+    .d-nav .navbar-toggler {
+        min-height:
+            40px;
+    }
+}
+
+
+/* =========================================================
+   Reduce Motion
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .d-top a,
+    .d-nav a,
+    .d-nav button,
+    .d-nav .links .nav-link::before,
+    .d-nav .links .nav-link::after {
+        transition:
+            none;
+    }
+}
